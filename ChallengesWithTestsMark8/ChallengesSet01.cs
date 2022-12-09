@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ChallengesWithTestsMark8
 {
@@ -18,32 +19,45 @@ namespace ChallengesWithTestsMark8
 
         public double Subtract(double minuend, double subtrahend)
         {
-            throw new NotImplementedException();
+            double sum = minuend - subtrahend;
+            return sum;
         }
 
         public int Add(int number1, int number2)
         {
-            throw new NotImplementedException();
+            int sum = number1 + number2;
+            return sum;
         }
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            throw new NotImplementedException();
+            return (number1 < number2) ? number1 : number2;
+           
         }
 
         public long Multiply(long factor1, long factor2)
         {
-            throw new NotImplementedException();
+            long sum = factor1 * factor2;
+            return sum;
         }
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+            //Console.WriteLine($"Hi {nameOfPerson}");
+            
+            if(nameOfPerson == "")
+            {
+                return "Hello!";
+            }
+            else
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
         }
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            return "HEY!";
         }
     }
 }
