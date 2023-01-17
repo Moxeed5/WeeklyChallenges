@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -7,47 +8,63 @@ namespace ChallengesWithTestsMark8
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+            var Falsey =  vals.Where(x => x == false);
+
+            return Falsey.Any();
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            var numSum = numbers.Sum(x => x);
+
+            return (numSum % 2 == 0 || numbers == null) ? false : true;
+            
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            bool result = password.Any(x => char.IsDigit(x) && char.IsUpper(x));
+
+            return result;
+
         }
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            return val[0];
         }
 
         public char GetLastLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            return val[val.Length - 1];
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            return dividend / divisor;
         }
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            return nums[nums.Length - 1] - nums[0];
         }
 
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            int[] array = Enumerable.Range(1, 100).ToArray();
+
+
+            int[] oddNumbers = array.Where(n => n % 2 != 0).ToArray();
+
+            return oddNumbers;
+
+
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+            string[] wordsToUpper = words.Select(s => s.ToUpper()).ToArray();
+
         }
     }
 }

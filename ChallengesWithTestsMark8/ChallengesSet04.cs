@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq; 
 
 namespace ChallengesWithTestsMark8
 {
@@ -6,47 +9,144 @@ namespace ChallengesWithTestsMark8
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            throw new NotImplementedException();
+            int evenSum = numbers.Where(x => x % 2 == 0).Sum();
+            int oddSum = numbers.Where(x => x % 2 != 0).Sum();
+
+            return evenSum - oddSum;
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
+            int length1 = str1.Length;
+            int length2 = str2.Length;
+            int length3 = str3.Length;
+            int length4 = str4.Length;
+
+            var list = new List<int>();
+
+            list.AddRange(new int[] { length1, length2, length3, length4});
+
+            return list.Min();
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            throw new NotImplementedException();
+            var list = new List<int>();
+
+            list.AddRange(new int[] { number1, number2, number3, number4 });
+
+            return list.Min();
+
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            throw new NotImplementedException();
+            //var myBiz = new Business();
+
+            //myBiz.Name = "TrueCoders";
+
+            //myBiz.Name = biz.Name;
+
+            biz.Name = "TrueCoders";
+
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
-            throw new NotImplementedException();
+            if(sideLength1 + sideLength2 <= sideLength3 || sideLength1 + sideLength3 <= sideLength2 || sideLength2 + sideLength3 <= sideLength1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            
         }
 
         public bool IsStringANumber(string input)
         {
-            throw new NotImplementedException();
+            bool isNum = double.TryParse(input, out double x);
+
+            return isNum;
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            var nonNullCounter = 0;
+            var nullCounter = 0;
+
+            foreach(var item in objs)
+            {
+                if(item == null)
+                {
+                    nullCounter++;
+                }
+                if(item != null)
+                {
+                    nonNullCounter++;
+                }
+               
+            }
+            if(nullCounter > nonNullCounter)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            
+            double EvenCounter = 0;
+            double EvenSum = 0;
+            //double zero = 0;
+
+            if(numbers == null)
+            {
+                return 0;
+            }
+
+            foreach (var item in numbers)
+            {
+
+                if(item % 2 == 0)
+                {
+                    EvenSum += item;
+                    EvenCounter++;
+                }
+                
+            }
+
+            if(EvenCounter > 0)
+            {
+                return EvenSum / EvenCounter; 
+            }
+            else
+            {
+                return 0;
+            }
+
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            var fact = 1;
+
+            if(number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            for(int i = number; i > 0; i--)
+            {
+                fact *= i;
+            }
+
+            return fact;
         }
     }
 }
