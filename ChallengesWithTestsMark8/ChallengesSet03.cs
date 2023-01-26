@@ -15,6 +15,11 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
+            if(numbers == null)
+            {
+                return false;
+            }
+
             var numSum = numbers.Sum(x => x);
 
             return (numSum % 2 == 0 || numbers == null) ? false : true;
@@ -23,11 +28,12 @@ namespace ChallengesWithTestsMark8
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            bool result = password.Any(x => char.IsDigit(x) && char.IsUpper(x));
-
-            return result;
-
+            bool hasUpper = password.Any(char.IsUpper);
+            bool hasLower = password.Any(char.IsLower);
+            bool hasNumber = password.Any(char.IsNumber);
+            return hasUpper && hasLower && hasNumber;
         }
+
 
         public char GetFirstLetterOfString(string val)
         {
@@ -41,7 +47,14 @@ namespace ChallengesWithTestsMark8
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            return dividend / divisor;
+            if (divisor == 0)
+            {
+                return 0; ;
+            }
+            else
+            {
+                return dividend / divisor;
+            }
         }
 
         public int LastMinusFirst(int[] nums)
@@ -63,8 +76,11 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            string[] wordsToUpper = words.Select(s => s.ToUpper()).ToArray();
-
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].ToUpper();
+            }
         }
+
     }
 }

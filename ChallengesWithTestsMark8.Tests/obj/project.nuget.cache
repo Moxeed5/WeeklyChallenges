@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TP5HWhAlnab+YkfPuSAIZMkVVehKfopjGeDZ7l+qPeX6j9KMiZHBs/DMvJ0uemuuFGAnW2h3Wfz7FZO9lWK4VQ==",
+  "dgSpecHash": "grEZgIa4n7torAG27lvuy7u55IqdVS9O+C5g2MbGAw1gENtxrAxUn5HxraKR9wUYh5EjkiJxBOm9zvflQtE3Mg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Maxx705\\Desktop\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8.Tests\\ChallengesWithTestsMark8.Tests.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Maxx705\\.nuget\\packages\\microsoft.testplatform.testhost\\15.9.0\\microsoft.testplatform.testhost.15.9.0.nupkg.sha512",
     "C:\\Users\\Maxx705\\.nuget\\packages\\microsoft.win32.primitives\\4.0.1\\microsoft.win32.primitives.4.0.1.nupkg.sha512",
     "C:\\Users\\Maxx705\\.nuget\\packages\\microsoft.win32.registry\\4.0.0\\microsoft.win32.registry.4.0.0.nupkg.sha512",
+    "C:\\Users\\Maxx705\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512",
     "C:\\Users\\Maxx705\\.nuget\\packages\\netstandard.library\\1.6.0\\netstandard.library.1.6.0.nupkg.sha512",
     "C:\\Users\\Maxx705\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Maxx705\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",

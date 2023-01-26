@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[15.9.0, )"
             },
+            "morelinq": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.0, )"
@@ -112,6 +116,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "morelinq": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

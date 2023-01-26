@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "g948xsQCYiWuz00EkfNTrqWBh3KvpwONG75U93lbq3/3kYI8TEz7oD/9IW1QRPY06m4M3RwIc8pI0QoinWZOhg==",
+  "dgSpecHash": "J09ydC3xzcSHDQIQnG0vAIWW7vsh6uYtLKNIbwSH2soCLN/R30H+pq3nLNJzmBXyR8QyrVNMn42zo8Jq/qEwTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Maxx705\\Desktop\\repos\\WeeklyChallenges\\ChallengesWithTestsMark8\\ChallengesWithTestsMark8.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Maxx705\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512"
+  ],
   "logs": []
 }

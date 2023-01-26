@@ -28,11 +28,20 @@ namespace ChallengesWithTestsMark8
 
         public bool IsNumberOdd(int num)
         {
-            return (num % 2 == 0);
+           
+            return (num % 2 != 0);
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
+            if (numbers == null)
+            {
+                return 0;
+            }
+            if(numbers.Count() == 0)
+            {
+                return 0;
+            }
             var min = numbers.Min();
 
             var max = numbers.Max();
@@ -46,43 +55,18 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            //int resultofStr1 = Int32.TryParse(str1);
-
-            //int resultofStr2 = Int32.TryParse(str2);
-
-            //var arr1 = str1.ToArray();
-
-            //var arr2 = str2.ToArray();
-
-            return (str1.Length > str2.Length) ? str1.Length : str2.Length;
-
-           // int arr1Counter = 0;
-
-           // int arr2Counter = 0;
-
-           // foreach(var item in arr1)
-           // {
-           //     arr1Counter++;
-           // }
-
-           //foreach(var item in arr2)
-           // {
-           //     arr2Counter++;
-           // }
-
-           //if(arr1Counter > arr2Counter)
-           // {
-           //     return arr1Counter;
-           // }
-           // else
-           // {
-           //     return arr2Counter;
-           // }
-
+            
+            return (str1.Length > str2.Length) ? str2.Length : str1.Length;
         }
 
         public int Sum(int[] numbers)
         {
+
+            if(numbers == null)
+            {
+                return 0;
+            }
+
             int sumOfNums = 0;
 
             foreach(var item in numbers)
@@ -95,6 +79,11 @@ namespace ChallengesWithTestsMark8
 
         public int SumEvens(int[] numbers)
         {
+            if(numbers ==null)
+            {
+                return 0; 
+            }
+
             int sumOfEvens = 0;
 
             foreach(var item in numbers)
@@ -111,6 +100,11 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOdd(List<int> numbers)
         {
+            if(numbers == null)
+            {
+                return false;
+            }
+
             int result = 0;
 
             foreach(int item in numbers)
@@ -118,21 +112,28 @@ namespace ChallengesWithTestsMark8
                 result += item;
             }
 
-            return (result % 2 == 0);
+            return (result % 2 != 0);
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            long oddCount = 0;
+            long oddsTracker = 0; 
 
-            for(long i = number; i >= 0; i--)
+            if (number <= 1)
+            {
+                return 0;
+            }
+            for(long i = number -1; i >= 0; i-- )
             {
                 if(i % 2 != 0)
                 {
-                    oddCount++;
+                    oddsTracker++;
                 }
+
             }
-            return oddCount;
+
+            return oddsTracker;
         }
+
     }
 }
